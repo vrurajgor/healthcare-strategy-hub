@@ -6,7 +6,7 @@ const experiences = [
     icon: Building2,
     role: "Protein Therapies Project Management (PT-PM) Co-op",
     company: "Regeneron Pharmaceuticals",
-    period: "April – September",
+    period: "April 2026 – September 2026",
     bullets: [
       "Supported project coordination across Product, Analytical, and Process Development (PAPD) Operations",
       "Contributed to structured execution of protein therapies programs",
@@ -19,7 +19,7 @@ const experiences = [
     icon: TrendingDown,
     role: "Associate Project Manager",
     company: "Vaaruni Buildcon LLP",
-    period: "",
+    period: "April 2025 – December 2025",
     bullets: [
       "Managed 5+ projects (~$3M)",
       "Improved stakeholder communication (↓30% escalation time)",
@@ -32,7 +32,7 @@ const experiences = [
     icon: BarChart3,
     role: "Senior MedTech Analyst",
     company: "EMeRG (Consulting)",
-    period: "",
+    period: "June 2022 – March 2025",
     bullets: [
       "Delivered 30+ competitive intelligence reports",
       "Influenced $50M+ strategic decisions",
@@ -45,7 +45,7 @@ const experiences = [
     icon: FlaskConical,
     role: "Scientist",
     company: "Dr. Reddy's Laboratories",
-    period: "",
+    period: "October 2020 – May 2022",
     bullets: [
       "Conducted FDA/ICH-compliant bioanalytical studies",
       "Improved workflows (↓20% turnaround time)",

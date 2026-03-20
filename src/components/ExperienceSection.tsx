@@ -6,7 +6,7 @@ const experiences = [
     icon: Building2,
     role: "Protein Therapies Project Management (PT-PM) Co-op",
     company: "Regeneron Pharmaceuticals",
-    period: "April – September",
+    period: "April 2026 – September 2026",
     bullets: [
       "Supported project coordination across Product, Analytical, and Process Development (PAPD) Operations",
       "Contributed to structured execution of protein therapies programs",

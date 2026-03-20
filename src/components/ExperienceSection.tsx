@@ -19,7 +19,7 @@ const experiences = [
     icon: TrendingDown,
     role: "Associate Project Manager",
     company: "Vaaruni Buildcon LLP",
-    period: "",
+    period: "April 2025 – December 2025",
     bullets: [
       "Managed 5+ projects (~$3M)",
       "Improved stakeholder communication (↓30% escalation time)",

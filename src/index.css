@@ -88,12 +88,14 @@
   }
 
   .badge-skill {
-    @apply inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium
-      bg-primary/8 text-primary border border-primary/12 transition-all duration-200;
+    @apply inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium text-primary border transition-all duration-200;
+    background-color: hsl(var(--primary) / 0.08);
+    border-color: hsl(var(--primary) / 0.12);
   }
 
   .badge-skill:hover {
-    @apply bg-primary/14 border-primary/20;
+    background-color: hsl(var(--primary) / 0.14);
+    border-color: hsl(var(--primary) / 0.2);
   }
 
   .card-hover {

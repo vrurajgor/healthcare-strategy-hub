@@ -45,7 +45,7 @@ const experiences = [
     icon: FlaskConical,
     role: "Scientist",
     company: "Dr. Reddy's Laboratories",
-    period: "",
+    period: "October 2020 – May 2022",
     bullets: [
       "Conducted FDA/ICH-compliant bioanalytical studies",
       "Improved workflows (↓20% turnaround time)",

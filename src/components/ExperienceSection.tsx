@@ -32,7 +32,7 @@ const experiences = [
     icon: BarChart3,
     role: "Senior MedTech Analyst",
     company: "EMeRG (Consulting)",
-    period: "",
+    period: "June 2022 – March 2025",
     bullets: [
       "Delivered 30+ competitive intelligence reports",
       "Influenced $50M+ strategic decisions",

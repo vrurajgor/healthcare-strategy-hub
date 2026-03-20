@@ -78,7 +78,7 @@ export default function ExperienceSection() {
               className={`reveal stagger-${Math.min(i + 1, 4)} bg-card rounded-lg p-6 md:p-8 card-hover border border-border`}
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: 'hsl(var(--primary) / 0.08)' }}>
                   <exp.icon size={18} className="text-primary" />
                 </div>
                 <div>

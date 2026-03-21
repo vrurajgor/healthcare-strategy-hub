@@ -17,9 +17,7 @@ export default function AboutSection() {
           <h2 className="section-title">Who I Am</h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
-          {/* Left: Text */}
-          <div className="flex-1 space-y-10">
+        <div className="max-w-3xl space-y-10">
             <div className="reveal stagger-1">
               <p className="text-muted-foreground leading-[1.8] text-base">
                 A dual master's candidate in{" "}
@@ -63,24 +61,6 @@ export default function AboutSection() {
                 ))}
               </ul>
             </div>
-          </div>
-
-          {/* Right: Profile image */}
-          <div className="flex-shrink-0 reveal stagger-2 relative group">
-            <div className="absolute -inset-4 rounded-full border-2 border-dashed border-foreground/10 group-hover:border-secondary/30 transition-colors duration-500" />
-            <div className="absolute -inset-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ boxShadow: '0 0 40px 8px hsl(var(--secondary) / 0.12)' }}
-            />
-            <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden
-              shadow-2xl shadow-black/10 border-4 border-background relative z-10"
-            >
-              <img
-                src={aboutImage}
-                alt="Vrunda Rajgor"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>

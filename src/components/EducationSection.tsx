@@ -56,7 +56,7 @@ export default function EducationSection() {
     <section id="education" className="section-padding relative" ref={ref}>
       {/* Decorative */}
       <div className="absolute top-20 left-0 w-64 h-64 rounded-full opacity-[0.02]"
-        style={{ background: 'radial-gradient(circle, hsl(210, 70%, 28%), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(233, 55%, 21%), transparent 70%)' }}
       />
 
       <div className="section-container">

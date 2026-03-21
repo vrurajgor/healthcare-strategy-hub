@@ -141,7 +141,7 @@ export default function ProjectsSection() {
   return (
     <section id="portfolio" className="section-padding relative" ref={ref}>
       <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-[0.03]"
-        style={{ background: 'radial-gradient(circle, hsl(210, 70%, 28%), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(233, 55%, 21%), transparent 70%)' }}
       />
 
       <div className="section-container">

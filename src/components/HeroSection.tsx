@@ -19,13 +19,13 @@ export default function HeroSection() {
 
       {/* Decorative floating elements */}
       <div className="absolute top-1/4 right-[15%] w-72 h-72 rounded-full float-slow opacity-[0.06]"
-        style={{ background: 'radial-gradient(circle, hsl(174, 42%, 50%), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(33, 90%, 55%), transparent 70%)' }}
       />
       <div className="absolute bottom-1/3 right-[30%] w-48 h-48 rounded-full float-medium opacity-[0.04]"
-        style={{ background: 'radial-gradient(circle, hsl(210, 70%, 50%), transparent 70%)', animationDelay: '2s' }}
+        style={{ background: 'radial-gradient(circle, hsl(210, 55%, 50%), transparent 70%)', animationDelay: '2s' }}
       />
       <div className="absolute top-[60%] left-[10%] w-32 h-32 rounded-full float-slow opacity-[0.05]"
-        style={{ background: 'radial-gradient(circle, hsl(174, 42%, 60%), transparent 70%)', animationDelay: '3s' }}
+        style={{ background: 'radial-gradient(circle, hsl(33, 90%, 60%), transparent 70%)', animationDelay: '3s' }}
       />
 
       {/* Gradient overlay at bottom */}

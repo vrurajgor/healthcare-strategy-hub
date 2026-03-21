@@ -67,7 +67,7 @@ const projects = [
     reflection:
       "Strengthened my ability to apply quantitative risk modeling and PMBOK-based frameworks in healthcare IT projects, reinforcing proactive risk planning for complex digital health transformations.",
     color: "secondary",
-    link: "https://drive.google.com/file/d/1YZBFIETsjcmc_mH3WPJayetqH2ttWdyc/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1iV-RjtvRynTA0evGvGO7ku_2AgLT3Umu/view?usp=drive_link",
   },
 ];
 

@@ -8,12 +8,12 @@ const experiences = [
     company: "Regeneron Pharmaceuticals",
     period: "April 2026 – September 2026",
     bullets: [
-      "Supported project coordination across Product, Analytical, and Process Development (PAPD) Operations",
-      "Contributed to structured execution of protein therapies programs",
-      "Collaborated across cross-functional teams in a regulated biopharma environment",
+      "Will support project coordination across Product, Analytical, and Process Development (PAPD) Operations",
+      "Will contribute to structured execution of protein therapies programs",
+      "Will collaborate across cross-functional teams in a regulated biopharma environment",
     ],
     impact:
-      "Strengthening real-world experience in biopharma project lifecycle management, cross-functional coordination, and operational strategy in advanced therapeutics.",
+      "Will strengthen real-world experience in biopharma project lifecycle management, cross-functional coordination, and operational strategy in advanced therapeutics.",
   },
   {
     icon: TrendingDown,

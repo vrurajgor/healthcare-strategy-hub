@@ -19,11 +19,6 @@ export default function HeroSection() {
 
           {/* Left: Text */}
           <div className="flex-1 space-y-5 text-center md:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm tracking-[0.15em] uppercase text-white/70">
-              <span className="text-secondary">✦</span>
-              Project Management · Life Sciences
-            </div>
 
             {/* Name */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.05] tracking-tight whitespace-nowrap">

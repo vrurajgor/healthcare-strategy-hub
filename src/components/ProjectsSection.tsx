@@ -85,6 +85,7 @@ const projects = [
       "Strengthened my expertise in applying statistical quality tools to real-world manufacturing scenarios, reinforcing data-driven decision-making for process improvement and quality assurance in regulated environments.",
     color: "primary",
   },
+];
 
 type Project = (typeof projects)[0];
 

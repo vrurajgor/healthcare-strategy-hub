@@ -131,6 +131,22 @@ export default function ExperienceSection() {
                   ))}
                 </ul>
 
+                {exp.clients && (
+                  <div className="ml-16 mb-6">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground/60 mb-3">Key Clients</p>
+                    <div className="flex flex-wrap items-center gap-6">
+                      {exp.clients.map((client) => (
+                        <img
+                          key={client.name}
+                          src={client.logo}
+                          alt={client.name}
+                          className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="ml-16 pl-4 border-l-2 border-secondary/25 bg-secondary/[0.03] rounded-r-lg py-3 pr-4">
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     <span className="font-semibold text-secondary">Impact: </span>

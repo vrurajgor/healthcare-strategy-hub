@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useReveal } from "@/hooks/useReveal";
 
 const clients = [
@@ -9,8 +8,7 @@ const clients = [
 ];
 
 export default function ClientsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  useReveal(sectionRef);
+  const sectionRef = useReveal();
 
   return (
     <section ref={sectionRef} className="section-padding section-alt">

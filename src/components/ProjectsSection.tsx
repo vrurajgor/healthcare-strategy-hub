@@ -18,7 +18,7 @@ const projects = [
     reflection:
       "Deepened my expertise in scope governance and adaptive project management, reinforcing my ability to bridge regulatory complexity with data-driven decision-making in biopharma.",
     color: "primary",
-    link: "https://docs.google.com/presentation/d/1uM8F2C615g8QDUIDRxn2Otr5oJD4vlEg/edit?usp=drive_link&ouid=112829090258392512752&rtpof=true&sd=true",
+    link: "https://drive.google.com/file/d/1YZBFIETsjcmc_mH3WPJayetqH2ttWdyc/view?usp=drive_link",
   },
   {
     title: "EHR Risk Analysis Project",

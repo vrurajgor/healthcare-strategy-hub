@@ -43,33 +43,38 @@ export default function AchievementsSection() {
   const ref = useReveal();
 
   return (
-    <section id="achievements" className="section-padding section-alt" ref={ref}>
+    <section id="achievements" className="section-padding section-alt relative" ref={ref}>
       <div className="section-container">
         <div className="reveal">
-          <p className="text-sm font-medium tracking-widest uppercase text-secondary mb-3">
-            Recognition
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-14">
+          <p className="section-label">Recognition</p>
+          <h2 className="section-title">
             Achievements &amp; Publications
           </h2>
+          <p className="section-subtitle mb-14">
+            Academic excellence, research contributions, and professional recognition.
+          </p>
         </div>
 
         {/* Publication */}
-        <div className="reveal stagger-1 mb-12">
-          <h3 className="text-lg font-display font-semibold text-foreground mb-5">
+        <div className="reveal stagger-1 mb-14">
+          <h3 className="text-lg font-display font-semibold text-foreground mb-6 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-primary" />
             Publication
           </h3>
           {publications.map((pub) => (
             <div
               key={pub.title}
-              className="bg-card rounded-lg p-6 md:p-8 border border-border card-hover"
+              className="bg-card rounded-xl p-6 md:p-8 border border-border card-hover group relative overflow-hidden"
             >
-              <div className="flex items-start gap-4 mb-4">
+              {/* Accent bar */}
+              <div className="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-xl" />
+
+              <div className="flex items-start gap-4 mb-4 ml-2">
                 <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
                   style={{ backgroundColor: "hsl(var(--primary) / 0.08)" }}
                 >
-                  <pub.icon size={18} className="text-primary" />
+                  <pub.icon size={20} className="text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="text-base font-semibold text-foreground leading-snug mb-1">
@@ -80,10 +85,10 @@ export default function AchievementsSection() {
                   </p>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed ml-14 mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed ml-2 mb-5 pl-16">
                 {pub.description}
               </p>
-              <div className="ml-14 flex flex-wrap items-center gap-2">
+              <div className="ml-2 pl-16 flex flex-wrap items-center gap-2">
                 {pub.tags.map((tag) => (
                   <span key={tag} className="badge-skill text-xs">
                     {tag}
@@ -94,7 +99,7 @@ export default function AchievementsSection() {
                     href={pub.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-medium text-secondary hover:underline ml-auto"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-secondary hover:text-primary transition-colors ml-auto link-underline"
                   >
                     View Publication <ExternalLink size={12} />
                   </a>
@@ -106,25 +111,26 @@ export default function AchievementsSection() {
 
         {/* Awards */}
         <div className="reveal stagger-2">
-          <h3 className="text-lg font-display font-semibold text-foreground mb-5">
+          <h3 className="text-lg font-display font-semibold text-foreground mb-6 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-secondary" />
             Awards &amp; Scholarships
           </h3>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {awards.map((award, i) => (
+          <div className="grid sm:grid-cols-3 gap-6">
+            {awards.map((award) => (
               <div
                 key={award.title}
-                className="bg-card rounded-lg p-6 border border-border card-hover text-center"
+                className="skill-category text-center"
               >
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-                  style={{ backgroundColor: "hsl(var(--secondary) / 0.1)" }}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5"
+                  style={{ backgroundColor: "hsl(var(--secondary) / 0.08)" }}
                 >
-                  <award.icon size={20} className="text-secondary" />
+                  <award.icon size={22} className="text-secondary" />
                 </div>
-                <h4 className="text-sm font-semibold text-foreground mb-1">
+                <h4 className="text-sm font-bold text-foreground mb-1">
                   {award.title}
                 </h4>
-                <p className="text-xs text-secondary font-medium mb-2">
+                <p className="text-xs font-semibold text-secondary mb-3">
                   {award.org}
                 </p>
                 <p className="text-xs text-muted-foreground leading-relaxed">

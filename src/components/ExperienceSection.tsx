@@ -14,6 +14,7 @@ const experiences = [
     ],
     impact:
       "Will strengthen real-world experience in biopharma project lifecycle management, cross-functional coordination, and operational strategy in advanced therapeutics.",
+    accent: "secondary",
   },
   {
     icon: TrendingDown,
@@ -27,6 +28,7 @@ const experiences = [
     ],
     impact:
       "Enhanced project execution, stakeholder alignment, and data-driven reporting capabilities.",
+    accent: "primary",
   },
   {
     icon: BarChart3,
@@ -40,6 +42,7 @@ const experiences = [
     ],
     impact:
       "Developed strong expertise in healthcare strategy, innovation analysis, and market intelligence.",
+    accent: "secondary",
   },
   {
     icon: FlaskConical,
@@ -53,6 +56,7 @@ const experiences = [
     ],
     impact:
       "Built deep understanding of regulated healthcare systems and scientific rigor.",
+    accent: "primary",
   },
 ];
 
@@ -60,55 +64,67 @@ export default function ExperienceSection() {
   const ref = useReveal();
 
   return (
-    <section id="experience" className="section-padding section-alt" ref={ref}>
+    <section id="experience" className="section-padding section-alt relative" ref={ref}>
       <div className="section-container">
         <div className="reveal">
-          <p className="text-sm font-medium tracking-widest uppercase text-secondary mb-3">
-            Experience
+          <p className="section-label">Experience</p>
+          <h2 className="section-title">Professional Journey</h2>
+          <p className="section-subtitle mb-14">
+            Building expertise across biopharma, consulting, and project management.
           </p>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-14">
-            Professional Journey
-          </h2>
         </div>
 
-        <div className="space-y-6">
+        <div className="relative space-y-6">
           {experiences.map((exp, i) => (
             <div
               key={exp.role}
-              className={`reveal stagger-${Math.min(i + 1, 4)} bg-card rounded-lg p-6 md:p-8 card-hover border border-border`}
+              className={`reveal stagger-${Math.min(i + 1, 4)}`}
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: 'hsl(var(--primary) / 0.08)' }}>
-                  <exp.icon size={18} className="text-primary" />
+              <div className="bg-card rounded-xl p-6 md:p-8 card-hover border border-border group relative overflow-hidden">
+                {/* Top accent bar */}
+                <div className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: `linear-gradient(90deg, hsl(var(--${exp.accent})), transparent)` }}
+                />
+
+                <div className="flex items-start gap-4 mb-5">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: 'hsl(var(--primary) / 0.08)' }}>
+                    <exp.icon size={20} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground leading-snug">
+                      {exp.role}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1">
+                      <p className="text-sm font-medium text-secondary">
+                        {exp.company}
+                      </p>
+                      <span className="text-muted-foreground/40">·</span>
+                      <p className="text-sm text-muted-foreground">
+                        {exp.period}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground leading-snug">
-                    {exp.role}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {exp.company}
-                    {exp.period && ` · ${exp.period}`}
+
+                <ul className="space-y-2.5 mb-6 ml-16">
+                  {exp.bullets.map((b) => (
+                    <li
+                      key={b}
+                      className="text-sm text-muted-foreground flex items-start gap-3 leading-relaxed"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="ml-16 pl-4 border-l-2 border-secondary/25 bg-secondary/[0.03] rounded-r-lg py-3 pr-4">
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    <span className="font-semibold text-secondary">Impact: </span>
+                    {exp.impact}
                   </p>
                 </div>
-              </div>
-
-              <ul className="space-y-2 mb-5 ml-14">
-                {exp.bullets.map((b) => (
-                  <li
-                    key={b}
-                    className="text-sm text-muted-foreground flex items-start gap-2"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-secondary mt-2 shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="ml-14 pl-4 border-l-2 border-secondary/30">
-                <p className="text-sm text-foreground/80">
-                  <span className="font-medium text-secondary">Impact:</span>{" "}
-                  {exp.impact}
-                </p>
               </div>
             </div>
           ))}

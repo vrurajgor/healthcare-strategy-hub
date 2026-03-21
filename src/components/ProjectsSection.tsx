@@ -1,8 +1,25 @@
 import { useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
-import { ChevronDown, Lightbulb, Target, Wrench } from "lucide-react";
+import { ChevronDown, ExternalLink, Lightbulb, Target, Wrench } from "lucide-react";
 
 const projects = [
+  {
+    title: "Controlling Scope in Regulated Healthcare & Biopharma Projects",
+    subtitle: "Governance, Hybrid Models, and Predictive Intelligence",
+    tools: "Systematic Literature Review, Predictive Analytics",
+    association: "Northeastern University",
+    overview:
+      "Examines how scope can be effectively controlled in highly regulated healthcare and biopharma environments through governance maturity, stakeholder alignment, hybrid project management models, and predictive analytics.",
+    outcome: [
+      "Analyzed peer-reviewed studies (2019–2025) on scope stability and regulatory compliance",
+      "Identified major gaps in current frameworks and proposed data-driven strategies",
+      "Highlighted the need for integrated governance systems in high-risk healthcare projects",
+    ],
+    reflection:
+      "Deepened my expertise in scope governance and adaptive project management, reinforcing my ability to bridge regulatory complexity with data-driven decision-making in biopharma.",
+    color: "primary",
+    link: "https://docs.google.com/presentation/d/1uM8F2C615g8QDUIDRxn2Otr5oJD4vlEg/edit?usp=drive_link&ouid=112829090258392512752&rtpof=true&sd=true",
+  },
   {
     title: "EHR Risk Analysis Project",
     tools: "Primavera, Monte Carlo Simulation",
@@ -14,7 +31,7 @@ const projects = [
     ],
     reflection:
       "Strengthened my ability to apply quantitative risk modeling in healthcare systems and reinforced proactive risk planning in digital health projects.",
-    color: "primary",
+    color: "secondary",
   },
   {
     title: "Healthcare Technology Evaluation",
@@ -27,7 +44,7 @@ const projects = [
     ],
     reflection:
       "Deepened my understanding of innovation adoption and how emerging technologies reshape healthcare delivery and strategy.",
-    color: "secondary",
+    color: "primary",
   },
   {
     title: "Agile Simulation – Product Launch",
@@ -39,7 +56,7 @@ const projects = [
     ],
     reflection:
       "Enhanced adaptability, prioritization, and stakeholder communication in dynamic environments.",
-    color: "primary",
+    color: "secondary",
   },
   {
     title: "Market Intelligence & Strategy",
@@ -51,52 +68,105 @@ const projects = [
     ],
     reflection:
       "Strengthened my ability to translate data into strategic decisions impacting innovation and product positioning.",
-    color: "secondary",
+    color: "primary",
   },
 ];
 
-function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
+type Project = (typeof projects)[0];
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const [expanded, setExpanded] = useState(false);
+  const isPrimary = project.color === "primary";
 
   return (
-    <div className={`bg-card rounded-xl border border-border card-hover overflow-hidden group relative`}>
+    <div className="bg-card rounded-2xl border border-border overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+      {/* Top accent bar */}
+      <div
+        className="h-1 w-full"
+        style={{
+          background: isPrimary
+            ? "linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)))"
+            : "linear-gradient(90deg, hsl(var(--secondary)), hsl(var(--primary)))",
+        }}
+      />
+
       {/* Number badge */}
-      <div className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-        style={{ backgroundColor: `hsl(var(--${project.color}) / 0.08)`, color: `hsl(var(--${project.color}))` }}>
-        {String(index + 1).padStart(2, '0')}
+      <div
+        className="absolute top-6 right-5 w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
+        style={{
+          backgroundColor: `hsl(var(--${project.color}) / 0.1)`,
+          color: `hsl(var(--${project.color}))`,
+        }}
+      >
+        {String(index + 1).padStart(2, "0")}
       </div>
 
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full text-left p-6 md:p-8"
       >
-        <div className="pr-10">
-          <h3 className="text-lg font-semibold text-foreground mb-2">
+        <div className="pr-12">
+          <h3 className="text-lg font-semibold text-foreground mb-1 leading-snug">
             {project.title}
           </h3>
+          {project.subtitle && (
+            <p className="text-sm text-muted-foreground mb-2 italic">
+              {project.subtitle}
+            </p>
+          )}
+          {project.association && (
+            <span className="inline-block text-xs font-medium px-2.5 py-1 rounded-full mb-3 bg-primary/10 text-primary">
+              {project.association}
+            </span>
+          )}
           {project.tools && (
-            <div className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide uppercase text-secondary mb-3">
+            <div className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide uppercase text-secondary mb-3 ml-2">
               <Wrench size={12} />
               {project.tools}
             </div>
           )}
-          <p className="text-sm text-muted-foreground leading-relaxed">{project.overview}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {project.overview}
+          </p>
         </div>
 
-        <div className="flex items-center gap-2 mt-4 text-xs font-medium text-primary">
-          {expanded ? "Show less" : "View details"}
-          <ChevronDown size={14} className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} />
+        <div className="flex items-center gap-4 mt-5">
+          <span className="flex items-center gap-2 text-xs font-medium text-primary">
+            {expanded ? "Show less" : "View details"}
+            <ChevronDown
+              size={14}
+              className={`transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+            />
+          </span>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-xs font-medium text-secondary hover:text-secondary/80 transition-colors"
+            >
+              <ExternalLink size={12} />
+              View Presentation
+            </a>
+          )}
         </div>
       </button>
 
-      <div className={`grid transition-all duration-400 ease-out ${expanded ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+      <div
+        className={`grid transition-all duration-500 ease-out ${expanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+      >
         <div className="overflow-hidden">
           <div className="px-6 md:px-8 pb-6 md:pb-8 space-y-5">
             <div className="h-px bg-border" />
 
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                style={{ backgroundColor: 'hsl(var(--secondary) / 0.08)' }}>
+              <div
+                className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                style={{
+                  backgroundColor: "hsl(var(--secondary) / 0.1)",
+                }}
+              >
                 <Target size={14} className="text-secondary" />
               </div>
               <div>
@@ -105,7 +175,10 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                 </p>
                 <ul className="space-y-1.5">
                   {project.outcome.map((o) => (
-                    <li key={o} className="text-sm text-foreground/80 flex items-start gap-2">
+                    <li
+                      key={o}
+                      className="text-sm text-foreground/80 flex items-start gap-2"
+                    >
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0" />
                       {o}
                     </li>
@@ -115,8 +188,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                style={{ backgroundColor: 'hsl(var(--primary) / 0.08)' }}>
+              <div
+                className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                style={{
+                  backgroundColor: "hsl(var(--primary) / 0.1)",
+                }}
+              >
                 <Lightbulb size={14} className="text-primary" />
               </div>
               <div>
@@ -140,8 +217,12 @@ export default function ProjectsSection() {
 
   return (
     <section id="portfolio" className="section-padding relative" ref={ref}>
-      <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-[0.03]"
-        style={{ background: 'radial-gradient(circle, hsl(233, 55%, 21%), transparent 70%)' }}
+      <div
+        className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-[0.03]"
+        style={{
+          background:
+            "radial-gradient(circle, hsl(var(--primary)), transparent 70%)",
+        }}
       />
 
       <div className="section-container">
@@ -149,14 +230,23 @@ export default function ProjectsSection() {
           <p className="section-label">Portfolio</p>
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle mb-14">
-            Key projects demonstrating healthcare strategy and analytical capabilities.
+            Key projects demonstrating healthcare strategy, scope governance, and analytical capabilities.
           </p>
         </div>
 
+        {/* Featured / highlighted project - full width */}
+        <div className="reveal stagger-1 mb-8">
+          <ProjectCard project={projects[0]} index={0} />
+        </div>
+
+        {/* Remaining projects in 2-col grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p, i) => (
-            <div key={p.title} className={`reveal stagger-${Math.min(i + 1, 4)}`}>
-              <ProjectCard project={p} index={i} />
+          {projects.slice(1).map((p, i) => (
+            <div
+              key={p.title}
+              className={`reveal stagger-${Math.min(i + 2, 5)}`}
+            >
+              <ProjectCard project={p} index={i + 1} />
             </div>
           ))}
         </div>

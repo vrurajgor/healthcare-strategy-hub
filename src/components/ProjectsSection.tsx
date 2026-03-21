@@ -53,17 +53,21 @@ const projects = [
     link: "https://drive.google.com/file/d/1E5C3-5NdwZddIJBv7d8HuJg7UQl4_dkx/view?usp=drive_link",
   },
   {
-    title: "EHR Risk Analysis Project",
-    tools: "Primavera, Monte Carlo Simulation",
+    title: "Implementing an Electronic Health Record at Central City Medical Group – Risk Management & Schedule Confidence",
+    subtitle: "Risk Identification, Prioritization, Monte Carlo Simulation & Contingency Planning",
+    tools: "Primavera P6, Monte Carlo Simulation, Risk Register Matrix",
+    association: "Northeastern University",
     overview:
-      "Evaluated cost and schedule risks for healthcare IT implementation.",
+      "Led the risk management planning for a 9-month EHR implementation project at Central City Medical Group (CCMG). Developed a comprehensive risk management plan following PMBOK® guidelines, covering risk identification, qualitative and quantitative analysis, response strategies, and contingency reserve estimation to ensure HIPAA-compliant digital transformation.",
     outcome: [
-      "Delivered structured risk analysis",
-      "Created compliance documentation",
+      "Identified and prioritized 10 key risks using a Risk Register Matrix with probability-impact scoring",
+      "Performed Monte Carlo simulation to determine schedule confidence levels and contingency reserves",
+      "Designed mitigation and response strategies for critical risks including data migration failures, HIPAA non-compliance, and staff resistance to adoption",
     ],
     reflection:
-      "Strengthened my ability to apply quantitative risk modeling in healthcare systems and reinforced proactive risk planning in digital health projects.",
+      "Strengthened my ability to apply quantitative risk modeling and PMBOK-based frameworks in healthcare IT projects, reinforcing proactive risk planning for complex digital health transformations.",
     color: "secondary",
+    link: "https://drive.google.com/file/d/1YZBFIETsjcmc_mH3WPJayetqH2ttWdyc/view?usp=drive_link",
   },
   {
     title: "Healthcare Technology Evaluation",

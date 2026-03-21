@@ -1,6 +1,5 @@
 import { useReveal } from "@/hooks/useReveal";
 import { ArrowRight } from "lucide-react";
-import aboutImage from "@/assets/vrunda-about.jpg";
 
 export default function AboutSection() {
   const ref = useReveal();

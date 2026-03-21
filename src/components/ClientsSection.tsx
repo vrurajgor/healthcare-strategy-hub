@@ -1,34 +1,36 @@
 import { useReveal } from "@/hooks/useReveal";
+import geHealthcareLogo from "@/assets/clients/ge-healthcare.png";
+import philipsLogo from "@/assets/clients/philips-healthcare.png";
+import medtronicLogo from "@/assets/clients/medtronic.png";
+import samsungLogo from "@/assets/clients/samsung-healthcare.png";
 
 const clients = [
-  "GE Healthcare",
-  "Philips Healthcare",
-  "Medtronic",
-  "Samsung Healthcare",
+  { name: "GE Healthcare", logo: geHealthcareLogo },
+  { name: "Philips Healthcare", logo: philipsLogo },
+  { name: "Medtronic", logo: medtronicLogo },
+  { name: "Samsung Healthcare", logo: samsungLogo },
 ];
 
 export default function ClientsSection() {
   const sectionRef = useReveal();
 
   return (
-    <section ref={sectionRef} className="section-padding section-alt">
+    <section ref={sectionRef} className="section-padding">
       <div className="section-container text-center">
         <span className="section-label reveal">Clients</span>
-        <h2 className="section-title reveal stagger-1">Trusted By Industry Leaders</h2>
-        <p className="section-subtitle mx-auto reveal stagger-2 mb-14">
-          Proud to have collaborated with leading organizations in healthcare and MedTech.
-        </p>
+        <h2 className="section-title reveal stagger-1">Clients</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 reveal stagger-3">
-          {clients.map((name) => (
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mt-14 reveal stagger-2">
+          {clients.map((client) => (
             <div
-              key={name}
-              className="flex items-center justify-center px-6 py-8 rounded-xl border border-border bg-card
-                transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/20"
+              key={client.name}
+              className="flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
             >
-              <span className="text-lg font-display font-semibold text-foreground/80">
-                {name}
-              </span>
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-16 md:h-20 w-auto object-contain"
+              />
             </div>
           ))}
         </div>

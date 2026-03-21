@@ -86,13 +86,17 @@ export default function HeroSection() {
 
           {/* Profile image */}
           <div className="flex-shrink-0">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border-2 border-primary-foreground/15 shadow-2xl shadow-black/20">
-              <img
-                src={profileImage}
-                alt="Vrunda Rajgor"
-                className="w-full h-full object-cover object-top"
-              />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
+            <div className="relative">
+              {/* Decorative ring */}
+              <div className="absolute -inset-3 rounded-full border-2 border-secondary/30 animate-spin" style={{ animationDuration: '12s' }} />
+              <div className="absolute -inset-1.5 rounded-full border border-primary-foreground/10" />
+              <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary-foreground/20 shadow-2xl shadow-black/30">
+                <img
+                  src={profileImage}
+                  alt="Vrunda Rajgor"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             </div>
           </div>
         </div>

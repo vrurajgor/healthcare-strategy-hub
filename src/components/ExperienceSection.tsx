@@ -49,7 +49,7 @@ const experiences = [
       { name: "GE HealthCare", logo: geHealthcareLogo },
       { name: "Philips", logo: philipsLogo },
       { name: "Medtronic", logo: medtronicLogo },
-      { name: "Samsung Healthcare", logo: samsungLogo },
+      
       { name: "Mindray", logo: mindrayLogo },
     ],
     impact:

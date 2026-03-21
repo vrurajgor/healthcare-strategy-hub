@@ -37,6 +37,21 @@ const projects = [
     link: "https://drive.google.com/file/d/1znHVjioMlD7aVa1-B5NKRTK534Ra4QPF/view?usp=drive_link",
   },
   {
+    title: "Transforming Value-Based Care at Geisinger Health System Through AI-Driven Scope Management",
+    tools: "AI & Predictive Analytics, WBS, EHR Integration",
+    association: "Northeastern University",
+    overview:
+      "Led a scope-managed technology case project based on the Geisinger Health System STAIR program, which uses AI, NLP, and predictive analytics to identify high-risk patients and improve care delivery under value-based care (VBC) models.",
+    outcome: [
+      "Defined objectives, WBS, technical requirements, stakeholder workflows, and a formal change control process to prevent scope creep",
+      "Key outcomes analyzed: 10% reduction in avoidable hospitalizations, wait times reduced from 112 to 12 days, zero missed malignancies, and $5M+ in cost savings",
+      "Demonstrated how structured scope management and data-driven technology integration improve access, quality, and efficiency in complex healthcare systems",
+    ],
+    reflection:
+      "Reinforced my expertise in applying AI-driven strategies and structured project management to transform healthcare delivery while maintaining clinical quality and cost targets.",
+    color: "primary",
+  },
+  {
     title: "EHR Risk Analysis Project",
     tools: "Primavera, Monte Carlo Simulation",
     overview:

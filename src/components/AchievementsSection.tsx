@@ -10,7 +10,7 @@ const publications = [
     date: "February 26, 2021",
     description:
       "Contributed to heterologous expression and high-degree purification of the SauUSI enzyme — advancing understanding of antibiotic resistance mechanisms in molecular biology.",
-    link: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkab142/6154473",
+    link: "https://academic.oup.com/nar/article/49/4/2161/6127270",
     tags: ["Molecular Biology", "Antibiotic Resistance", "Enzyme Purification"],
   },
 ];

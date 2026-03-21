@@ -1,5 +1,10 @@
 import { useReveal } from "@/hooks/useReveal";
 import { Building2, TrendingDown, BarChart3, FlaskConical } from "lucide-react";
+import geHealthcareLogo from "@/assets/clients/ge-healthcare.png";
+import philipsLogo from "@/assets/clients/philips-healthcare.png";
+import medtronicLogo from "@/assets/clients/medtronic.png";
+import samsungLogo from "@/assets/clients/samsung-healthcare.png";
+import mindrayLogo from "@/assets/clients/mindray.png";
 
 const experiences = [
   {
@@ -39,6 +44,13 @@ const experiences = [
       "Delivered 30+ competitive intelligence reports",
       "Influenced $50M+ strategic decisions",
       "Conducted forecasting, pricing, and adoption analysis",
+    ],
+    clients: [
+      { name: "GE HealthCare", logo: geHealthcareLogo },
+      { name: "Philips", logo: philipsLogo },
+      { name: "Medtronic", logo: medtronicLogo },
+      { name: "Samsung Healthcare", logo: samsungLogo },
+      { name: "Mindray", logo: mindrayLogo },
     ],
     impact:
       "Developed strong expertise in healthcare strategy, innovation analysis, and market intelligence.",
@@ -118,6 +130,22 @@ export default function ExperienceSection() {
                     </li>
                   ))}
                 </ul>
+
+                {exp.clients && (
+                  <div className="ml-16 mb-6">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground/60 mb-3">Key Clients</p>
+                    <div className="flex flex-wrap items-center gap-6">
+                      {exp.clients.map((client) => (
+                        <img
+                          key={client.name}
+                          src={client.logo}
+                          alt={client.name}
+                          className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="ml-16 pl-4 border-l-2 border-secondary/25 bg-secondary/[0.03] rounded-r-lg py-3 pr-4">
                   <p className="text-sm text-foreground/80 leading-relaxed">

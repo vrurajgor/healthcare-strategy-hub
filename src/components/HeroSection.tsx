@@ -33,7 +33,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/20 to-transparent" />
 
       <div className="section-container relative z-10 py-32">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12 lg:gap-16">
           {/* Text content */}
           <div className="flex-1 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-foreground/15 bg-primary-foreground/5 backdrop-blur-sm mb-8">

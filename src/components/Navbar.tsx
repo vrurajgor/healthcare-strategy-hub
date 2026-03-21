@@ -36,14 +36,7 @@ export default function Navbar() {
       }`}
     >
       <div className="section-container flex items-center justify-between h-16">
-        <button
-          onClick={() => handleClick("#home")}
-          className={`font-display text-xl font-bold tracking-tight transition-colors duration-300 ${
-            scrolled ? "text-primary" : "text-primary-foreground"
-          }`}
-        >
-          Vrunda Rajgor
-        </button>
+        <div className="w-8" />
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-1">

@@ -3,7 +3,7 @@ import { Building2, TrendingDown, BarChart3, FlaskConical } from "lucide-react";
 import geHealthcareLogo from "@/assets/clients/ge-healthcare.png";
 import philipsLogo from "@/assets/clients/philips-healthcare.png";
 import medtronicLogo from "@/assets/clients/medtronic.png";
-import samsungLogo from "@/assets/clients/samsung-healthcare.png";
+
 import mindrayLogo from "@/assets/clients/mindray.png";
 
 const experiences = [
@@ -49,7 +49,7 @@ const experiences = [
       { name: "GE HealthCare", logo: geHealthcareLogo },
       { name: "Philips", logo: philipsLogo },
       { name: "Medtronic", logo: medtronicLogo },
-      { name: "Samsung Healthcare", logo: samsungLogo },
+      
       { name: "Mindray", logo: mindrayLogo },
     ],
     impact:

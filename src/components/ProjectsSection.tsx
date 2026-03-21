@@ -21,6 +21,22 @@ const projects = [
     link: "https://drive.google.com/file/d/1YZBFIETsjcmc_mH3WPJayetqH2ttWdyc/view?usp=drive_link",
   },
   {
+    title: "Data-Driven Evaluation of Project Management Tools for Healthcare Operations",
+    tools: "Technology Evaluation & Benchmarking, Systems Evaluation Frameworks",
+    association: "Northeastern University",
+    overview:
+      "Conducted a comparative analysis of leading project management tools (Microsoft Project, Jira, and Smartsheet) to determine the best solution for healthcare organizations. Evaluated each platform across usability, customization, scalability, security, compliance readiness, integration, cost, and collaboration.",
+    outcome: [
+      "Researched healthcare technology trends (AI, telemedicine, blockchain, IoMT, RPA, precision medicine) and employment growth shifts",
+      "Built a star-based comparison model and identified implementation risks with mitigation strategies",
+      "Concluded Smartsheet as the most balanced and cost-effective solution for healthcare project management",
+    ],
+    reflection:
+      "Strengthened my ability to systematically evaluate technology platforms against healthcare-specific requirements, balancing compliance, scalability, and cost-effectiveness.",
+    color: "secondary",
+    link: "https://drive.google.com/file/d/1znHVjioMlD7aVa1-B5NKRTK534Ra4QPF/view?usp=drive_link",
+  },
+  {
     title: "EHR Risk Analysis Project",
     tools: "Primavera, Monte Carlo Simulation",
     overview:

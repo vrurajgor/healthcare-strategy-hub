@@ -83,6 +83,7 @@ const projects = [
     ],
     reflection:
       "Strengthened my expertise in applying statistical quality tools to real-world manufacturing scenarios, reinforcing data-driven decision-making for process improvement and quality assurance in regulated environments.",
+    link: "https://drive.google.com/file/d/1fjIKxD_yjqUz4KIzHQUTsY7ghGa1bQ8z/view?usp=drive_link",
     color: "primary",
   },
 ];

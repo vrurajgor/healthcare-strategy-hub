@@ -44,6 +44,9 @@ export default function HeroSection() {
 
             {/* Name */}
             <div>
+              <p className="text-lg sm:text-xl text-primary-foreground/60 font-medium mb-2">
+                Hello, I'm
+              </p>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-[1] tracking-tight">
                 Vrunda Rajgor
               </h1>

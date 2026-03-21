@@ -1,12 +1,6 @@
 import { useReveal } from "@/hooks/useReveal";
-import { GraduationCap, Briefcase, TrendingUp, Heart, ArrowRight } from "lucide-react";
-
-const journey = [
-  { icon: GraduationCap, label: "Science", desc: "Cell & Molecular Biology", color: "primary" },
-  { icon: Briefcase, label: "Consulting", desc: "MedTech Market Intelligence", color: "secondary" },
-  { icon: TrendingUp, label: "Project Management", desc: "Business Analytics", color: "primary" },
-  { icon: Heart, label: "Healthcare Strategy", desc: "Biopharma & Digital Health", color: "secondary" },
-];
+import { ArrowRight } from "lucide-react";
+import aboutImage from "@/assets/vrunda-about.jpg";
 
 export default function AboutSection() {
   const ref = useReveal();
@@ -24,8 +18,9 @@ export default function AboutSection() {
           <h2 className="section-title">Who I Am</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div className="space-y-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+          {/* Left: Text */}
+          <div className="flex-1 space-y-10">
             <div className="reveal stagger-1">
               <p className="text-muted-foreground leading-[1.8] text-base">
                 I'm <span className="text-foreground font-semibold">Vrunda Rajgor</span> — a project manager who speaks two languages fluently: science and strategy. With dual Master's degrees in{" "}
@@ -69,34 +64,20 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Growth Journey */}
-          <div className="reveal stagger-2">
-            <h3 className="text-lg font-display font-semibold text-foreground mb-10 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-secondary" />
-              Growth Journey
-            </h3>
-            <div className="relative pl-12 space-y-6">
-              {/* Timeline line */}
-              <div className="absolute left-[1.19rem] top-2 bottom-2 w-px"
-                style={{ background: 'linear-gradient(to bottom, hsl(var(--secondary)), hsl(var(--primary) / 0.15))' }}
+          {/* Right: Profile image */}
+          <div className="flex-shrink-0 reveal stagger-2 relative group">
+            <div className="absolute -inset-4 rounded-full border-2 border-dashed border-foreground/10 group-hover:border-secondary/30 transition-colors duration-500" />
+            <div className="absolute -inset-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ boxShadow: '0 0 40px 8px hsl(var(--secondary) / 0.12)' }}
+            />
+            <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden
+              shadow-2xl shadow-black/10 border-4 border-background relative z-10"
+            >
+              <img
+                src={aboutImage}
+                alt="Vrunda Rajgor"
+                className="w-full h-full object-cover object-top"
               />
-
-              {journey.map((step, i) => (
-                <div key={step.label} className="relative group">
-                  {/* Timeline dot with pulse */}
-                  <div className="absolute -left-[calc(1.5rem+0.5px)] top-4">
-                    <div className="w-10 h-10 rounded-full bg-card border-2 border-secondary flex items-center justify-center
-                      shadow-sm group-hover:shadow-md group-hover:shadow-secondary/20 transition-all duration-300">
-                      <step.icon size={16} className="text-secondary" />
-                    </div>
-                  </div>
-
-                  <div className="bg-card rounded-xl border border-border p-6 card-hover group-hover:border-secondary/30 transition-colors">
-                    <p className="text-base font-semibold text-foreground mb-1">{step.label}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

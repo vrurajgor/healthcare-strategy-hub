@@ -17,7 +17,7 @@ const education = [
     degree: "Biocon–KGI Certificate in Biosciences & Pharmaceutical Sciences",
     school: "Keck Graduate Institute",
     location: "Claremont, CA",
-    gpa: "3.9 / 4.0",
+    
     description:
       "Gained deep industry-oriented training in pharmaceutical drug development, biopharmaceutical QA/QC, US Food & Drug Law, CMC regulation of biologics, and mammalian cell biotechnology. This program bridged my lab science foundation with real-world pharmaceutical operations, building competencies in bioseparations, fermentation technology, and regulatory compliance critical for biopharma project management.",
     coursework: [

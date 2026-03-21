@@ -41,9 +41,11 @@ const experiences = [
     company: "EMeRG (Consulting)",
     period: "June 2022 – March 2025",
     bullets: [
-      "Delivered 30+ competitive intelligence reports",
-      "Influenced $50M+ strategic decisions",
-      "Conducted forecasting, pricing, and adoption analysis",
+      "Consulted for 10+ Fortune 500 medical device companies (GE HealthCare, Philips, Medtronic, Samsung, Mindray) on 20+ global projects, influencing $50M+ in product strategy and GTM planning",
+      "Produced 30+ competitive intelligence reports across imaging, diagnostics, and digital health, helping clients identify $10M+ market opportunities",
+      "Analyzed 10+ international MedTech conferences (NA & EMEA), converting competitive intelligence into actionable R&D and pipeline strategies",
+      "Partnered with 50+ clinical end-users (radiologists, biomedical engineers, pharmacists) to capture product requirements, increasing customer-centric validation inputs by 35%",
+      "Delivered pricing, forecasting, and adoption studies for 10+ emerging technologies (AI imaging, digital health, minimally invasive devices), shaping investment and product roadmap decisions",
     ],
     clients: [
       { name: "GE HealthCare", logo: geHealthcareLogo },
@@ -53,7 +55,7 @@ const experiences = [
       { name: "Mindray", logo: mindrayLogo },
     ],
     impact:
-      "Developed strong expertise in healthcare strategy, innovation analysis, and market intelligence.",
+      "Built deep expertise in MedTech market intelligence, competitive strategy, and healthcare innovation — directly influencing product roadmaps and strategic decisions for Fortune 500 medical device companies.",
     accent: "secondary",
   },
   {

@@ -150,18 +150,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               className={`transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
             />
           </span>
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-1.5 text-xs font-medium text-secondary hover:text-secondary/80 transition-colors"
-            >
-              <ExternalLink size={12} />
-              View Presentation
-            </a>
-          )}
         </div>
       </button>
 

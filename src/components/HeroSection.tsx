@@ -34,9 +34,8 @@ export default function HeroSection() {
             <div className="w-12 h-1 bg-secondary rounded-full mx-auto md:mx-0" />
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-white/60 font-medium leading-relaxed">
-              Healthcare &amp; MedTech Strategy · Project Management ·<br className="hidden sm:block" />
-              Market Intelligence · Business Analytics
+            <p className="text-base sm:text-lg text-white/60 font-medium leading-relaxed whitespace-nowrap">
+              Healthcare &amp; MedTech Strategy · Project Management · Market Intelligence · Business Analytics
             </p>
 
             {/* Quote */}

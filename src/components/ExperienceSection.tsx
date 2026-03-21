@@ -41,9 +41,9 @@ const experiences = [
     company: "EMeRG (Consulting)",
     period: "June 2022 – March 2025",
     bullets: [
-      "Consulted for 10+ Fortune 500 medical device companies on 20+ global projects, influencing $50M+ in product strategy",
-      "Produced 30+ competitive intelligence reports across imaging, diagnostics, and digital health",
-      "Partnered with 50+ clinical end-users to capture product requirements (↑35% validation inputs)",
+      "Consulted for 10+ Fortune 500 MedTech companies (↑$50M+ strategy impact)",
+      "Delivered 30+ competitive intelligence reports across imaging & diagnostics",
+      "Captured product requirements from 50+ clinical end-users (↑35% validation inputs)",
     ],
     clients: [
       { name: "GE HealthCare", logo: geHealthcareLogo },

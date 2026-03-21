@@ -61,7 +61,7 @@ export default function Navbar() {
           className={`md:hidden p-2 rounded-lg transition-colors ${
             scrolled
               ? "text-foreground hover:bg-muted"
-              : "text-primary-foreground hover:bg-primary-foreground/10"
+              : "text-foreground hover:bg-foreground/10"
           }`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"

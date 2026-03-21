@@ -69,6 +69,22 @@ const projects = [
     color: "secondary",
     link: "https://drive.google.com/file/d/1iV-RjtvRynTA0evGvGO7ku_2AgLT3Umu/view?usp=drive_link",
   },
+  {
+    title: "Quality Analytics Simulation – Statistical Process Control for Manufacturing",
+    subtitle: "X-bar & R Charts, Process Capability, and Cost-of-Quality Analysis",
+    tools: "Minitab, SPC, Monte Carlo Simulation",
+    association: "Northeastern University",
+    overview:
+      "Evaluated the stability and capability of a manufacturing process at Gainsborough Manufacturing Company using Statistical Process Control (SPC). Simulated a full production shift, calculated control limits for X-bar and R charts, assessed process capability indices (Cp & Cpk), and performed cost-of-quality analysis to optimize inspection vs. defect trade-offs.",
+    outcome: [
+      "Established precise control limits confirming the manufacturing process is in statistical control with only common-cause variation",
+      "Calculated Cp (1.75) and Cpk (1.52) indices, confirming the process is highly capable of meeting specification limits",
+      "Performed cost-of-quality analysis comparing 100% inspection vs. no inspection, determining the optimal quality strategy based on defect probability and cost trade-offs",
+    ],
+    reflection:
+      "Strengthened my expertise in applying statistical quality tools to real-world manufacturing scenarios, reinforcing data-driven decision-making for process improvement and quality assurance in regulated environments.",
+    color: "primary",
+  },
 ];
 
 type Project = (typeof projects)[0];

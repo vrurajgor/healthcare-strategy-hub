@@ -140,7 +140,7 @@ export default function ExperienceSection() {
                           key={client.name}
                           src={client.logo}
                           alt={client.name}
-                          className="h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+                          className="h-14 md:h-16 w-auto object-contain grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
                         />
                       ))}
                     </div>

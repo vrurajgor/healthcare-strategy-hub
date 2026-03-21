@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, ArrowDown } from "lucide-react";
 import profileImage from "@/assets/vrunda-profile.jpg";
 
 export default function HeroSection() {
@@ -15,7 +15,11 @@ export default function HeroSection() {
 
           {/* Left: Text */}
           <div className="flex-1 space-y-5 text-center md:text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05] tracking-tight">
+            <p className="text-lg text-muted-foreground font-medium tracking-wide">
+              Hello! I'm
+            </p>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05] tracking-tight whitespace-nowrap">
               Vrunda Rajgor
             </h1>
 
@@ -23,17 +27,29 @@ export default function HeroSection() {
               Project Management Professional
             </p>
 
-            {/* CTA + Social */}
-            <div className="flex flex-wrap items-center gap-4 pt-4 justify-center md:justify-start">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-6 justify-center md:justify-start">
               <button
-                onClick={() => scrollTo("#contact")}
+                onClick={() => scrollTo("#projects")}
                 className="px-7 py-3 bg-foreground text-background font-semibold rounded-full
                   transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
-                  active:translate-y-0 active:scale-[0.98]"
+                  active:translate-y-0 active:scale-[0.98] inline-flex items-center gap-2"
               >
-                Let's Connect
+                View Work <ArrowDown size={16} />
               </button>
 
+              <a
+                href="mailto:rajgor.v@northeastern.edu"
+                className="px-7 py-3 border border-foreground/20 text-foreground font-semibold rounded-full
+                  transition-all duration-300 hover:bg-foreground/5 hover:-translate-y-0.5
+                  active:translate-y-0 active:scale-[0.98]"
+              >
+                Contact
+              </a>
+            </div>
+
+            {/* Social */}
+            <div className="flex items-center gap-3 pt-2 justify-center md:justify-start">
               <a
                 href="https://www.linkedin.com/in/vrundarajgor"
                 target="_blank"
@@ -56,10 +72,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Profile image */}
-          <div className="flex-shrink-0 relative">
+          {/* Right: Profile image with decorative ring */}
+          <div className="flex-shrink-0 relative group">
+            <div className="absolute -inset-4 rounded-full border-2 border-dashed border-foreground/15 group-hover:border-foreground/30 transition-colors duration-500" />
+            <div className="absolute -inset-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ boxShadow: '0 0 40px 8px hsl(var(--secondary) / 0.15)' }}
+            />
             <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] rounded-full overflow-hidden
-              shadow-2xl shadow-black/10"
+              shadow-2xl shadow-black/10 relative z-10"
             >
               <img
                 src={profileImage}

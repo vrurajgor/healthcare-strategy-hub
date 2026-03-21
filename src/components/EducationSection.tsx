@@ -7,7 +7,7 @@ const education = [
     degree: "Master of Science in Project Management & Business Analytics",
     school: "Northeastern University",
     location: "Boston, MA",
-    gpa: "4.0 / 4.0",
+    
     highlight: "Merit-based scholarship recipient",
     description:
       "Focused on bridging healthcare strategy with data-driven project execution. Developed expertise in Agile planning, risk modeling, business analytics, and stakeholder management — applying these to real-world healthcare and biopharma scenarios. This program sharpened my ability to turn complex data into actionable decisions and lead cross-functional teams with clarity and structure.",
@@ -17,7 +17,7 @@ const education = [
     degree: "Biocon–KGI Certificate in Biosciences & Pharmaceutical Sciences",
     school: "Keck Graduate Institute",
     location: "Claremont, CA",
-    gpa: "3.9 / 4.0",
+    
     description:
       "Gained deep industry-oriented training in pharmaceutical drug development, biopharmaceutical QA/QC, US Food & Drug Law, CMC regulation of biologics, and mammalian cell biotechnology. This program bridged my lab science foundation with real-world pharmaceutical operations, building competencies in bioseparations, fermentation technology, and regulatory compliance critical for biopharma project management.",
     coursework: [
@@ -79,9 +79,6 @@ export default function EducationSection() {
                 <span className="text-sm font-bold text-secondary tracking-wide">
                   {edu.years}
                 </span>
-                {edu.gpa && (
-                  <span className="badge-skill text-xs font-semibold">{edu.gpa}</span>
-                )}
               </div>
 
               {/* Content card */}

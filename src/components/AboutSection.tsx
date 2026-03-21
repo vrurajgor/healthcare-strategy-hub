@@ -28,10 +28,9 @@ export default function AboutSection() {
           <div className="space-y-10">
             <div className="reveal stagger-1">
               <p className="text-muted-foreground leading-[1.8] text-base">
-                A dual master's candidate in <span className="text-foreground font-semibold">Project Management (Business Analytics)</span> and{" "}
-                <span className="text-foreground font-semibold">Cell &amp; Molecular Biology</span>, with
-                experience spanning healthcare consulting, MedTech strategy, and
-                pharmaceutical R&amp;D.
+                I'm <span className="text-foreground font-semibold">Vrunda Rajgor</span> — a project manager who speaks two languages fluently: science and strategy. With dual Master's degrees in{" "}
+                <span className="text-foreground font-semibold">Project Management (Business Analytics)</span> and{" "}
+                <span className="text-foreground font-semibold">Cell &amp; Molecular Biology</span>, I bridge the gap between the lab bench and the boardroom. My journey from molecular research to healthcare consulting has given me a rare lens — one that sees both the microscopic details and the macro-level vision needed to drive meaningful change in healthcare and biopharma.
               </p>
             </div>
 

@@ -79,9 +79,6 @@ export default function EducationSection() {
                 <span className="text-sm font-bold text-secondary tracking-wide">
                   {edu.years}
                 </span>
-                {edu.gpa && (
-                  <span className="badge-skill text-xs font-semibold">{edu.gpa}</span>
-                )}
               </div>
 
               {/* Content card */}

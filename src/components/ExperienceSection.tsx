@@ -45,6 +45,13 @@ const experiences = [
       "Influenced $50M+ strategic decisions",
       "Conducted forecasting, pricing, and adoption analysis",
     ],
+    clients: [
+      { name: "GE HealthCare", logo: geHealthcareLogo },
+      { name: "Philips", logo: philipsLogo },
+      { name: "Medtronic", logo: medtronicLogo },
+      { name: "Samsung Healthcare", logo: samsungLogo },
+      { name: "Mindray", logo: mindrayLogo },
+    ],
     impact:
       "Developed strong expertise in healthcare strategy, innovation analysis, and market intelligence.",
     accent: "secondary",

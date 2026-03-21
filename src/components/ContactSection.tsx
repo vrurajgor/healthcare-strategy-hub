@@ -32,7 +32,7 @@ export default function ContactSection() {
 
         <div className="reveal stagger-1 flex justify-center gap-4 mb-14">
           <a
-            href="mailto:vrunda.rajgor@example.com"
+            href="mailto:rajgor.v@northeastern.edu"
             className="group flex items-center gap-2.5 px-5 py-3 rounded-xl bg-card border border-border text-sm font-medium text-foreground
               hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-0.5"
           >

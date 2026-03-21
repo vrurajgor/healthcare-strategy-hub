@@ -9,6 +9,9 @@ export default function Footer() {
       <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <p className="font-display font-bold text-foreground text-sm mb-1">Vrunda Rajgor</p>
+          <a href="mailto:rajgor.v@northeastern.edu" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+            rajgor.v@northeastern.edu
+          </a>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} All rights reserved.
           </p>

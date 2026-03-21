@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useReveal from "@/hooks/useReveal";
+import { useReveal } from "@/hooks/useReveal";
 
 const clients = [
   "GE Healthcare",

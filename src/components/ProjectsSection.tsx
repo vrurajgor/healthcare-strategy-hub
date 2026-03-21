@@ -107,7 +107,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <div className="pr-12">
           <h3 className="text-lg font-semibold text-foreground mb-1 leading-snug">
-            {project.title}
+            {project.link ? (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-2 hover:decoration-primary"
+              >
+                {project.title}
+              </a>
+            ) : (
+              project.title
+            )}
           </h3>
           {project.subtitle && (
             <p className="text-sm text-muted-foreground mb-2 italic">

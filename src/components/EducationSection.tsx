@@ -7,7 +7,7 @@ const education = [
     degree: "Master of Science in Project Management & Business Analytics",
     school: "Northeastern University",
     location: "Boston, MA",
-    gpa: "4.0 / 4.0",
+    
     highlight: "Merit-based scholarship recipient",
     description:
       "Focused on bridging healthcare strategy with data-driven project execution. Developed expertise in Agile planning, risk modeling, business analytics, and stakeholder management — applying these to real-world healthcare and biopharma scenarios. This program sharpened my ability to turn complex data into actionable decisions and lead cross-functional teams with clarity and structure.",

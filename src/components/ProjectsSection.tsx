@@ -69,43 +69,6 @@ const projects = [
     color: "secondary",
     link: "https://drive.google.com/file/d/1YZBFIETsjcmc_mH3WPJayetqH2ttWdyc/view?usp=drive_link",
   },
-  {
-    title: "Healthcare Technology Evaluation",
-    tools: "Research & Analysis",
-    overview:
-      "Analyzed emerging MedTech and digital health technologies.",
-    outcome: [
-      "Produced evaluation reports",
-      "Supported strategic decisions",
-    ],
-    reflection:
-      "Deepened my understanding of innovation adoption and how emerging technologies reshape healthcare delivery and strategy.",
-    color: "primary",
-  },
-  {
-    title: "Agile Simulation – Product Launch",
-    tools: "Agile / Scrum Framework",
-    overview: "Simulated Agile product launch environment.",
-    outcome: [
-      "Managed sprint backlogs",
-      "Delivered iterative outputs",
-    ],
-    reflection:
-      "Enhanced adaptability, prioritization, and stakeholder communication in dynamic environments.",
-    color: "secondary",
-  },
-  {
-    title: "Market Intelligence & Strategy",
-    tools: "Competitive Analysis, Data Analytics",
-    overview: "Competitive intelligence across MedTech sectors.",
-    outcome: [
-      "Identified $10M+ opportunities",
-      "Delivered actionable insights",
-    ],
-    reflection:
-      "Strengthened my ability to translate data into strategic decisions impacting innovation and product positioning.",
-    color: "primary",
-  },
 ];
 
 type Project = (typeof projects)[0];

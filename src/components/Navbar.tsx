@@ -47,7 +47,7 @@ export default function Navbar() {
                 className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300 ${
                   scrolled
                     ? "text-foreground/70 hover:text-foreground hover:bg-muted"
-                    : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/10"
                 }`}
               >
                 {l.label}
@@ -61,7 +61,7 @@ export default function Navbar() {
           className={`md:hidden p-2 rounded-lg transition-colors ${
             scrolled
               ? "text-foreground hover:bg-muted"
-              : "text-primary-foreground hover:bg-primary-foreground/10"
+              : "text-foreground hover:bg-foreground/10"
           }`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"

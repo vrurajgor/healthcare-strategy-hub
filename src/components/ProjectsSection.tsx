@@ -50,6 +50,7 @@ const projects = [
     reflection:
       "Reinforced my expertise in applying AI-driven strategies and structured project management to transform healthcare delivery while maintaining clinical quality and cost targets.",
     color: "primary",
+    link: "https://drive.google.com/file/d/1E5C3-5NdwZddIJBv7d8HuJg7UQl4_dkx/view?usp=drive_link",
   },
   {
     title: "EHR Risk Analysis Project",

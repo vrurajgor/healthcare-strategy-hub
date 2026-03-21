@@ -13,6 +13,17 @@ const publications = [
     link: "https://academic.oup.com/nar/article/49/4/2161/6127270",
     tags: ["Molecular Biology", "Antibiotic Resistance", "Enzyme Purification"],
   },
+  {
+    icon: BookOpen,
+    title:
+      "Heterologous Expression and High Degree Purification of the Restriction Endonuclease SauUSI",
+    org: "Bio-protocol",
+    date: "January 5, 2022",
+    description:
+      "Published a detailed protocol for the heterologous expression and high-degree purification of the SauUSI restriction endonuclease, enabling reproducible research in molecular biology.",
+    link: "https://bio-protocol.org/en/bpdetail?id=4275&type=0",
+    tags: ["Enzyme Purification", "Molecular Biology", "Protocol"],
+  },
 ];
 
 const awards = [

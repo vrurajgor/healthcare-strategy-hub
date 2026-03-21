@@ -46,7 +46,7 @@ export default function SkillsSection() {
   const ref = useReveal();
 
   return (
-    <section id="skills" className="section-padding section-alt relative" ref={ref}>
+    <section id="skills" className="pb-24 md:pb-32 pt-8 md:pt-12 section-alt relative" ref={ref}>
       <div className="section-container">
         <div className="reveal">
           <p className="section-label">Skills</p>

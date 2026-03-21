@@ -72,14 +72,16 @@ export default function AboutSection() {
             <h3 className="text-lg font-display font-semibold text-foreground mb-8">
               Growth Journey
             </h3>
-            <div className="relative pl-8 border-l-2 border-border space-y-10">
+            <div className="relative pl-10 border-l-2 border-border space-y-8">
               {journey.map((step, i) => (
                 <div key={step.label} className="relative">
-                  <div className="absolute -left-[calc(1rem+1.25px)] top-0 w-8 h-8 rounded-full bg-card border-2 border-secondary flex items-center justify-center">
-                    <step.icon size={14} className="text-secondary" />
+                  <div className="absolute -left-[calc(1.25rem+1.25px)] top-0 w-10 h-10 rounded-full bg-card border-2 border-secondary flex items-center justify-center">
+                    <step.icon size={18} className="text-secondary" />
                   </div>
-                  <p className="font-semibold text-foreground">{step.label}</p>
-                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+                  <div className="bg-card rounded-lg border border-border p-5 card-hover">
+                    <p className="text-base font-semibold text-foreground mb-1">{step.label}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

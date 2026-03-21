@@ -3,16 +3,23 @@ import { GraduationCap, Award } from "lucide-react";
 
 const education = [
   {
+    years: "2025 – Present",
     degree: "Master of Science in Project Management & Business Analytics",
     school: "Northeastern University",
-    start: "Jan 2025",
+    location: "Boston, MA",
     gpa: "4.0 / 4.0",
-    highlights: ["Merit-based scholarship recipient"],
+    highlight: "Merit-based scholarship recipient",
+    description:
+      "Focused on bridging healthcare strategy with data-driven project execution. Developed expertise in Agile planning, risk modeling, business analytics, and stakeholder management — applying these to real-world healthcare and biopharma scenarios. This program sharpened my ability to turn complex data into actionable decisions and lead cross-functional teams with clarity and structure.",
   },
   {
+    years: "2019 – 2020",
     degree: "Biocon–KGI Certificate in Biosciences & Pharmaceutical Sciences",
     school: "Keck Graduate Institute",
+    location: "Claremont, CA",
     gpa: "3.9 / 4.0",
+    description:
+      "Gained deep industry-oriented training in pharmaceutical drug development, biopharmaceutical QA/QC, US Food & Drug Law, CMC regulation of biologics, and mammalian cell biotechnology. This program bridged my lab science foundation with real-world pharmaceutical operations, building competencies in bioseparations, fermentation technology, and regulatory compliance critical for biopharma project management.",
     coursework: [
       "Pharmaceutical Drug Development",
       "Biopharmaceutical QA/QC",
@@ -25,12 +32,20 @@ const education = [
     ],
   },
   {
+    years: "2017 – 2019",
     degree: "Master of Science in Cell & Molecular Biology",
     school: "The Maharaja Sayajirao University of Baroda",
+    location: "Vadodara, India",
+    description:
+      "Conducted advanced research in molecular biology and cellular mechanisms, strengthening scientific rigor and analytical thinking. Developed skills in experimental design, data interpretation, and scientific communication — forming the foundation for my contributions to published research on antibiotic resistance and enzyme purification.",
   },
   {
+    years: "2014 – 2017",
     degree: "Bachelor of Science in Cell & Molecular Biology",
     school: "The Maharaja Sayajirao University of Baroda",
+    location: "Vadodara, India",
+    description:
+      "Built a strong foundation in life sciences with coursework in genetics, biochemistry, microbiology, and cell biology. Developed laboratory skills and a passion for understanding biological systems at the molecular level, which launched my career trajectory into biopharma and healthcare.",
   },
 ];
 
@@ -49,50 +64,56 @@ export default function EducationSection() {
           </h2>
         </div>
 
-        <div className="relative pl-8 border-l-2 border-border space-y-10">
+        <div className="space-y-8">
           {education.map((edu, i) => (
             <div
               key={edu.degree}
-              className={`reveal stagger-${Math.min(i + 1, 4)} relative`}
+              className={`reveal stagger-${Math.min(i + 1, 4)} grid md:grid-cols-[160px_1fr] gap-6 md:gap-10`}
             >
-              {/* Timeline dot */}
-              <div className="absolute -left-[calc(1rem+1.25px)] top-0 w-8 h-8 rounded-full bg-card border-2 border-secondary flex items-center justify-center">
-                <GraduationCap size={14} className="text-secondary" />
+              {/* Year column */}
+              <div className="flex md:flex-col items-center md:items-end gap-3 md:gap-1 md:pt-1">
+                <span className="text-sm font-semibold text-secondary tracking-wide">
+                  {edu.years}
+                </span>
+                {edu.gpa && (
+                  <span className="badge-skill text-xs">{edu.gpa}</span>
+                )}
               </div>
 
+              {/* Content card */}
               <div className="bg-card rounded-lg p-6 md:p-8 border border-border card-hover">
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                  <h3 className="text-base font-semibold text-foreground leading-snug">
-                    {edu.degree}
-                  </h3>
-                  {edu.gpa && (
-                    <span className="badge-skill text-xs shrink-0">
-                      GPA: {edu.gpa}
-                    </span>
-                  )}
+                <div className="flex items-start gap-3 mb-2">
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                    style={{ backgroundColor: "hsl(var(--primary) / 0.08)" }}
+                  >
+                    <GraduationCap size={16} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-foreground leading-snug">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {edu.school} · {edu.location}
+                    </p>
+                  </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-3">
-                  {edu.school}
-                  {edu.start && ` · ${edu.start}`}
-                </p>
-
-                {edu.highlights && (
-                  <ul className="space-y-1.5 mb-3">
-                    {edu.highlights.map((h) => (
-                      <li
-                        key={h}
-                        className="flex items-center gap-2 text-sm text-foreground/80"
-                      >
-                        <Award size={13} className="text-secondary shrink-0" />
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
+                {edu.highlight && (
+                  <div className="flex items-center gap-2 ml-12 mb-3">
+                    <Award size={13} className="text-secondary shrink-0" />
+                    <span className="text-sm text-foreground/80 font-medium">
+                      {edu.highlight}
+                    </span>
+                  </div>
                 )}
 
+                <p className="text-sm text-muted-foreground leading-relaxed ml-12">
+                  {edu.description}
+                </p>
+
                 {edu.coursework && (
-                  <div>
+                  <div className="mt-4 ml-12">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
                       Key Coursework
                     </p>

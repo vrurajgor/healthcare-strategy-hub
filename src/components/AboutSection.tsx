@@ -15,7 +15,7 @@ export default function AboutSection() {
     <section id="about" className="section-padding relative" ref={ref}>
       {/* Decorative background */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-[0.03]"
-        style={{ background: 'radial-gradient(circle, hsl(174, 42%, 41%), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(33, 90%, 55%), transparent 70%)' }}
       />
 
       <div className="section-container">

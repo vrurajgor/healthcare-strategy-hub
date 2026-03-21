@@ -18,7 +18,7 @@ export default function ContactSection() {
     <section id="contact" className="section-padding relative overflow-hidden" ref={ref}>
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-[0.03]"
-        style={{ background: 'radial-gradient(circle, hsl(174, 42%, 41%), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(33, 90%, 55%), transparent 70%)' }}
       />
 
       <div className="section-container max-w-3xl relative z-10">

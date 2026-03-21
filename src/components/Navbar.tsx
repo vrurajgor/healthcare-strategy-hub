@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 const links = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Achievements", href: "#achievements" },
@@ -28,16 +29,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-card/90 backdrop-blur-md shadow-[0_1px_3px_rgb(0_0_0/0.06)]"
+          ? "bg-card/85 backdrop-blur-xl shadow-[0_1px_3px_rgb(0_0_0/0.06),0_8px_24px_-8px_rgb(0_0_0/0.04)]"
           : "bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between h-16">
         <button
           onClick={() => handleClick("#home")}
-          className={`font-display text-lg font-semibold tracking-tight transition-colors ${
+          className={`font-display text-xl font-bold tracking-tight transition-colors duration-300 ${
             scrolled ? "text-primary" : "text-primary-foreground"
           }`}
         >
@@ -45,13 +46,15 @@ export default function Navbar() {
         </button>
 
         {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-1">
           {links.map((l) => (
             <li key={l.href}>
               <button
                 onClick={() => handleClick(l.href)}
-                className={`text-sm font-medium transition-colors hover:text-secondary ${
-                  scrolled ? "text-foreground" : "text-primary-foreground/85"
+                className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300 ${
+                  scrolled
+                    ? "text-foreground/70 hover:text-foreground hover:bg-muted"
+                    : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"
                 }`}
               >
                 {l.label}
@@ -62,23 +65,28 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className={`md:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className={`md:hidden p-2 rounded-lg transition-colors ${
+            scrolled
+              ? "text-foreground hover:bg-muted"
+              : "text-primary-foreground hover:bg-primary-foreground/10"
+          }`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border">
-          <ul className="section-container py-4 space-y-3">
+        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border animate-[fade-in_0.2s_ease-out]">
+          <ul className="section-container py-4 space-y-1">
             {links.map((l) => (
               <li key={l.href}>
                 <button
                   onClick={() => handleClick(l.href)}
-                  className="block w-full text-left text-sm font-medium text-foreground hover:text-secondary transition-colors"
+                  className="block w-full text-left text-sm font-medium text-foreground/80 hover:text-foreground
+                    px-3 py-2.5 rounded-lg hover:bg-muted transition-colors"
                 >
                   {l.label}
                 </button>

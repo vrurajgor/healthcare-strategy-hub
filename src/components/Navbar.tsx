@@ -42,7 +42,7 @@ export default function Navbar() {
             scrolled ? "text-primary" : "text-primary-foreground"
           }`}
         >
-          VR
+          Vrunda Rajgor
         </button>
 
         {/* Desktop */}

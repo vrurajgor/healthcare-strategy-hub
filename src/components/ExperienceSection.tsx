@@ -76,14 +76,11 @@ export default function ExperienceSection() {
   const ref = useReveal();
 
   return (
-    <section id="experience" className="section-padding section-alt relative" ref={ref}>
+    <section id="experience" className="section-padding relative" ref={ref}>
       <div className="section-container">
-        <div className="reveal">
-          <p className="section-label">Experience</p>
-          <h2 className="section-title">Professional Journey</h2>
-          <p className="section-subtitle mb-14">
-            Building expertise across biopharma, consulting, and project management.
-          </p>
+        <div className="reveal text-center">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-2">EXPERIENCE</h2>
+          <h3 className="section-title">Work Experience</h3>
         </div>
 
         <div className="relative space-y-6">

@@ -134,7 +134,7 @@ export default function ExperienceSection() {
                 {exp.clients && (
                   <div className="ml-16 mb-6">
                     <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground/60 mb-3">Key Clients</p>
-                    <div className="flex flex-wrap items-center gap-6">
+                    <div className="flex flex-nowrap items-center gap-6 overflow-x-auto">
                       {exp.clients.map((client) => (
                         <img
                           key={client.name}

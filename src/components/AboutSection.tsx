@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="reveal stagger-1">
               <p className="text-muted-foreground leading-[1.9] text-base">
                 A dual master's candidate in{" "}
-                <span className="text-foreground font-semibold">Project Management (Business Analytics)</span> and{" "}
+                <span className="text-foreground font-semibold">Project Management (Concentration: Business Analytics)</span> and{" "}
                 <span className="text-foreground font-semibold">Cell &amp; Molecular Biology</span>, with
                 experience spanning healthcare consulting, MedTech strategy, and
                 pharmaceutical R&amp;D.

@@ -21,7 +21,7 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           className="group flex items-center gap-2 text-xs font-medium
-            transition-colors px-3 py-2 rounded-lg text-primary-foreground/70 hover:text-primary-foreground"
+            transition-colors px-3 py-2 rounded-lg text-muted-foreground hover:text-foreground"
         >
           <ArrowUp size={14} className="transition-transform group-hover:-translate-y-0.5" />
           Back to Top

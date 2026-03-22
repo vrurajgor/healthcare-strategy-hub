@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border">
           <ul className="section-container py-4 space-y-1">
             {links.map((l) => (
               <li key={l.href}>

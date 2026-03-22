@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-xl shadow-sm border-b border-border"
+          ? "bg-card/95 backdrop-blur-xl shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -45,8 +45,10 @@ export default function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => handleClick(l.href)}
-                className="text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300
-                  text-muted-foreground hover:text-primary hover:bg-primary/5"
+                className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300
+                  hover:text-primary hover:bg-primary/5 ${
+                    scrolled ? "text-muted-foreground" : "text-[hsl(210_40%_85%)] hover:text-white"
+                  }`}
               >
                 {l.label}
               </button>

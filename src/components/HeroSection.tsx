@@ -1,16 +1,9 @@
-import { Linkedin, Mail, ArrowRight, ChevronDown, Users, Briefcase, Heart, Clock } from "lucide-react";
+import { Linkedin, Mail, ArrowRight, ChevronDown } from "lucide-react";
 import profileImage from "@/assets/vrunda-profile.jpg";
 
 export default function HeroSection() {
   const scrollTo = (id: string) =>
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-
-  const stats = [
-    { icon: Users, value: "30+", label: "Projects Delivered" },
-    { icon: Briefcase, value: "3+", label: "Years Experience" },
-    { icon: Heart, value: "5+", label: "Clients Served" },
-    
-  ];
 
   return (
     <section
@@ -18,25 +11,19 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ background: 'hsl(var(--hero-bg))' }}
     >
-      {/* Subtle decorative elements */}
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-[0.04]"
-        style={{ background: 'radial-gradient(circle, hsl(var(--secondary)), transparent 70%)' }}
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 opacity-30"
+        style={{ background: 'linear-gradient(135deg, hsl(222 47% 11%), hsl(222 47% 15%), hsl(222 47% 11%))' }}
       />
 
       <div className="section-container relative z-10 py-24 md:py-32">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left: Text */}
-          <div className="flex-1 space-y-6 text-center md:text-left">
+          <div className="flex-1 space-y-5 text-center md:text-left">
             {/* Badge */}
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.15em] uppercase border"
-              style={{
-                color: 'hsl(var(--primary))',
-                borderColor: 'hsl(var(--primary) / 0.2)',
-                background: 'hsl(var(--primary) / 0.06)',
-              }}
-            >
-              Healthcare & MedTech Professional
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.12em] uppercase border border-border bg-muted/50 text-muted-foreground">
+              🚀 Project Management · Life Sciences
             </span>
 
             {/* Name */}
@@ -44,10 +31,18 @@ export default function HeroSection() {
               Vrunda Rajgor
             </h1>
 
+            {/* Orange underline */}
+            <div className="w-16 h-1 rounded-full bg-primary mx-auto md:mx-0" />
+
             {/* Subtitle */}
             <p className="text-base sm:text-lg leading-relaxed max-w-lg text-muted-foreground">
               Healthcare &amp; MedTech Strategy · Project Management ·
               Market Intelligence · Business Analytics
+            </p>
+
+            {/* Quote */}
+            <p className="text-sm sm:text-base italic text-muted-foreground/70 font-display max-w-md">
+              "Driving data-driven innovation across Biopharma, MedTech, and Digital Health"
             </p>
 
             {/* CTA Buttons */}
@@ -76,23 +71,30 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Stats Row */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 justify-center md:justify-start">
-              {stats.map((stat, i) => (
-                <div key={i} className="flex flex-col items-center text-center">
-                  <stat.icon size={20} className="text-secondary mb-1" />
-                  <span className="text-xl font-bold text-foreground">{stat.value}</span>
-                  <span className="text-xs text-muted-foreground">{stat.label}</span>
-                </div>
-              ))}
+            {/* Social Links */}
+            <div className="flex items-center gap-4 pt-3 justify-center md:justify-start text-sm text-muted-foreground">
+              <a
+                href="https://www.linkedin.com/in/vrundarajgor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <Linkedin size={15} /> LinkedIn
+              </a>
+              <span className="text-border">|</span>
+              <a
+                href="mailto:rajgor.v@northeastern.edu"
+                className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <Mail size={15} /> Email
+              </a>
             </div>
           </div>
 
           {/* Right: Profile image */}
           <div className="flex-shrink-0 relative group">
-            {/* Rounded rect frame with shadow */}
-            <div className="w-72 h-80 sm:w-80 sm:h-[380px] lg:w-[380px] lg:h-[440px] rounded-3xl overflow-hidden
-              shadow-xl relative z-10 border-4 border-white"
+            <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden
+              shadow-2xl relative z-10 border-4 border-white/20"
             >
               <img
                 src={profileImage}
@@ -101,18 +103,8 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-4 -left-4 sm:-left-8 bg-card rounded-2xl shadow-lg px-5 py-3 z-20
-              border border-border flex items-center gap-3"
-            >
-              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
-                <Heart size={18} className="text-secondary-foreground" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">Data-Driven Strategy</p>
-                <p className="text-xs text-muted-foreground">Biopharma & MedTech focus</p>
-              </div>
-            </div>
+            {/* Orange accent dot */}
+            <div className="absolute bottom-4 -right-2 w-4 h-4 rounded-full bg-primary z-20" />
           </div>
         </div>
       </div>

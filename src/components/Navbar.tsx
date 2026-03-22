@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -31,17 +31,13 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-xl shadow-sm"
+          ? "bg-background/95 backdrop-blur-xl shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between h-16">
-        <button
-          onClick={() => handleClick("#home")}
-          className="flex items-center gap-2 transition-colors duration-300"
-        >
-          <Home size={18} className={scrolled ? "text-primary" : "text-foreground"} />
-        </button>
+        <div />
+        {/* Empty left side - no logo/initials */}
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-1">
@@ -70,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border">
           <ul className="section-container py-4 space-y-1">
             {links.map((l) => (
               <li key={l.href}>

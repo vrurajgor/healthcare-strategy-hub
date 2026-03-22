@@ -82,7 +82,7 @@ export default function AboutSection() {
                 {journey.map((step, i) => (
                   <div key={step.title} className="relative flex items-start gap-4">
                     {/* Icon circle */}
-                    <div className="relative z-10 w-10 h-10 rounded-full border-2 border-primary bg-background
+                    <div className="relative z-10 w-10 h-10 rounded-full border-2 border-primary bg-card
                       flex items-center justify-center shrink-0">
                       <step.icon size={18} className="text-primary" />
                     </div>

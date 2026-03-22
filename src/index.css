@@ -211,7 +211,7 @@
   }
 
   .skill-category {
-    @apply rounded-2xl border p-6 transition-all duration-400;
+    @apply rounded-2xl border p-6 transition-all duration-300;
     background: hsl(var(--card));
     border-color: hsl(var(--border));
     position: relative;

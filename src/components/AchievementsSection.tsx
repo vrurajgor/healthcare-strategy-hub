@@ -54,7 +54,7 @@ export default function AchievementsSection() {
   const ref = useReveal();
 
   return (
-    <section id="achievements" className="section-padding section-alt relative" ref={ref}>
+    <section id="achievements" className="pt-24 md:pt-32 pb-12 md:pb-16 section-alt relative" ref={ref}>
       <div className="section-container">
         <div className="reveal">
           <p className="section-label">Recognition</p>

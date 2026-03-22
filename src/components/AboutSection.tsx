@@ -4,7 +4,7 @@ import { ArrowRight, FlaskConical, Building2, TrendingUp, HeartPulse } from "luc
 const journey = [
   { icon: FlaskConical, title: "Science", subtitle: "Cell & Molecular Biology" },
   { icon: Building2, title: "Consulting", subtitle: "MedTech Market Intelligence" },
-  { icon: TrendingUp, title: "Project Management", subtitle: "Business Analytics" },
+  { icon: TrendingUp, title: "Project Management", subtitle: "Business Analysis" },
   { icon: HeartPulse, title: "Healthcare Strategy", subtitle: "Biopharma & Digital Health" },
 ];
 

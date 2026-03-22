@@ -45,8 +45,10 @@ export default function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => handleClick(l.href)}
-                className="text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300
-                  text-muted-foreground hover:text-primary hover:bg-primary/5"
+                className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300
+                  hover:text-primary hover:bg-primary/5 ${
+                    scrolled ? "text-muted-foreground" : "text-[hsl(210_40%_85%)] hover:text-white"
+                  }`}
               >
                 {l.label}
               </button>

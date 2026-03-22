@@ -5,23 +5,27 @@ export default function Footer() {
     document.querySelector("#home")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <footer className="py-10 border-t border-border bg-card">
+    <footer className="py-10 border-t"
+      style={{ background: 'hsl(222 47% 11%)', borderColor: 'hsl(222 30% 20%)' }}
+    >
       <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <p className="font-display font-normal text-sm mb-1 text-foreground">
+          <p className="font-display font-normal text-sm mb-1" style={{ color: 'hsl(210 40% 92%)' }}>
             Vrunda Rajgor
           </p>
-          <a href="mailto:rajgor.v@northeastern.edu" className="text-xs transition-colors text-muted-foreground hover:text-foreground">
+          <a href="mailto:rajgor.v@northeastern.edu" className="text-xs transition-colors"
+            style={{ color: 'hsl(215 20% 55%)' }}>
             rajgor.v@northeastern.edu
           </a>
-          <p className="text-xs text-muted-foreground/50">
+          <p className="text-xs" style={{ color: 'hsl(215 20% 40%)' }}>
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
         <button
           onClick={scrollToTop}
           className="group flex items-center gap-2 text-xs font-medium
-            transition-colors px-3 py-2 rounded-lg text-muted-foreground hover:text-foreground"
+            transition-colors px-3 py-2 rounded-lg"
+          style={{ color: 'hsl(215 20% 55%)' }}
         >
           <ArrowUp size={14} className="transition-transform group-hover:-translate-y-0.5" />
           Back to Top

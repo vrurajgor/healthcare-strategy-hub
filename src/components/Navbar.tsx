@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -31,18 +31,21 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-card/90 backdrop-blur-xl shadow-[0_1px_0_hsl(var(--border))]"
+          ? "bg-card/95 backdrop-blur-xl shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between h-16">
         <button
           onClick={() => handleClick("#home")}
-          className={`font-display text-lg transition-colors duration-300 ${
-            scrolled ? "text-foreground" : "text-white/80"
-          }`}
+          className="flex items-center gap-2 transition-colors duration-300"
         >
-          VR
+          <Home size={18} className={scrolled ? "text-primary" : "text-foreground"} />
+          <span className={`font-display text-lg tracking-wide uppercase ${
+            scrolled ? "text-foreground" : "text-foreground"
+          }`}>
+            Vrunda Rajgor
+          </span>
         </button>
 
         {/* Desktop */}
@@ -51,11 +54,8 @@ export default function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => handleClick(l.href)}
-                className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300 ${
-                  scrolled
-                    ? "text-muted-foreground hover:text-foreground hover:bg-muted"
-                    : "text-white/50 hover:text-white/80 hover:bg-white/5"
-                }`}
+                className="text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300
+                  text-muted-foreground hover:text-primary hover:bg-primary/5"
               >
                 {l.label}
               </button>
@@ -65,11 +65,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-colors ${
-            scrolled
-              ? "text-foreground hover:bg-muted"
-              : "text-white hover:bg-white/10"
-          }`}
+          className="md:hidden p-2 rounded-lg transition-colors text-foreground hover:bg-muted"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -85,8 +81,8 @@ export default function Navbar() {
               <li key={l.href}>
                 <button
                   onClick={() => handleClick(l.href)}
-                  className="block w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground
-                    px-3 py-2.5 rounded-lg hover:bg-muted transition-colors"
+                  className="block w-full text-left text-sm font-medium text-muted-foreground hover:text-primary
+                    px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-colors"
                 >
                   {l.label}
                 </button>

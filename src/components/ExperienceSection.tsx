@@ -62,12 +62,12 @@ const experiences = [
     company: "Dr. Reddy's Laboratories",
     period: "October 2020 – May 2022",
     bullets: [
-      "Conducted FDA/ICH-compliant bioanalytical studies",
-      "Improved workflows (↓20% turnaround time)",
-      "Collaborated with QA, Regulatory, and R&D",
+      "Executed 15+ bioanalytical studies supporting pharmaceutical R&D with 100% FDA/ICH compliance",
+      "Automated data capture and reporting workflows (↓20% analysis turnaround time)",
+      "Aligned study execution with project milestones across QA, Regulatory, and R&D (95% on-time delivery)",
     ],
     impact:
-      "Built deep understanding of regulated healthcare systems and scientific rigor.",
+      "Built deep expertise in regulated pharmaceutical operations, scientific rigor, and cross-functional coordination.",
     accent: "primary",
   },
 ];

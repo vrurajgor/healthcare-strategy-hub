@@ -8,13 +8,13 @@ export default function Footer() {
     <footer className="py-10 border-t border-border bg-card">
       <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <p className="font-display font-normal text-sm mb-1 text-primary-foreground">
+          <p className="font-display font-normal text-sm mb-1 text-foreground">
             Vrunda Rajgor
           </p>
-          <a href="mailto:rajgor.v@northeastern.edu" className="text-xs transition-colors text-primary-foreground/70 hover:text-primary-foreground">
+          <a href="mailto:rajgor.v@northeastern.edu" className="text-xs transition-colors text-muted-foreground hover:text-foreground">
             rajgor.v@northeastern.edu
           </a>
-          <p className="text-xs text-primary-foreground/50">
+          <p className="text-xs text-muted-foreground/50">
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>

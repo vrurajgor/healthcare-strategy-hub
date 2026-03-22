@@ -8,7 +8,7 @@ export default function HeroSection() {
   const stats = [
     { icon: Users, value: "30+", label: "Projects Delivered" },
     { icon: Briefcase, value: "3+", label: "Years Experience" },
-    { icon: Heart, value: "100%", label: "Dedication" },
+    { icon: Heart, value: "5+", label: "Industries Served" },
     
   ];
 

@@ -1,50 +1,51 @@
-import { Linkedin, Mail, ArrowRight, ChevronDown } from "lucide-react";
+import { Linkedin, Mail, ArrowRight, ChevronDown, Users, Briefcase, Heart, Clock } from "lucide-react";
 import profileImage from "@/assets/vrunda-profile.jpg";
 
 export default function HeroSection() {
   const scrollTo = (id: string) =>
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
+  const stats = [
+    { icon: Users, value: "10+", label: "Projects Delivered" },
+    { icon: Briefcase, value: "3+", label: "Years Experience" },
+    { icon: Heart, value: "100%", label: "Dedication" },
+    { icon: Clock, value: "24/7", label: "Committed" },
+  ];
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'hsl(20, 10%, 12%)' }}
+      style={{ background: 'hsl(var(--hero-bg))' }}
     >
-      {/* Warm grain texture overlay */}
-      <div className="absolute inset-0 opacity-[0.03]"
-        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.5\'/%3E%3C/svg%3E")' }}
-      />
-
-      {/* Warm gradient orb */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full opacity-[0.06]"
-        style={{ background: 'radial-gradient(circle, hsl(15, 55%, 42%), transparent 70%)' }}
+      {/* Subtle decorative elements */}
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-[0.04]"
+        style={{ background: 'radial-gradient(circle, hsl(var(--secondary)), transparent 70%)' }}
       />
 
       <div className="section-container relative z-10 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left: Text */}
           <div className="flex-1 space-y-6 text-center md:text-left">
-            {/* Greeting */}
-            <p className="text-sm tracking-[0.25em] uppercase" style={{ color: 'hsl(36, 60%, 60%)' }}>
-              Hello, I'm
-            </p>
+            {/* Badge */}
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.15em] uppercase border"
+              style={{
+                color: 'hsl(var(--primary))',
+                borderColor: 'hsl(var(--primary) / 0.2)',
+                background: 'hsl(var(--primary) / 0.06)',
+              }}
+            >
+              Healthcare & MedTech Professional
+            </span>
 
             {/* Name */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-normal leading-[1.08] tracking-tight"
-              style={{ color: 'hsl(36, 30%, 92%)' }}
-            >
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-normal leading-[1.08] tracking-tight text-foreground">
               Vrunda<br />Rajgor
             </h1>
 
-            {/* Warm accent line */}
-            <div className="w-16 h-[2px] rounded-full mx-auto md:mx-0"
-              style={{ background: 'linear-gradient(90deg, hsl(15, 55%, 42%), hsl(36, 60%, 60%))' }}
-            />
-
             {/* Subtitle */}
-            <p className="text-base sm:text-lg leading-relaxed max-w-lg" style={{ color: 'hsl(36, 15%, 55%)' }}>
+            <p className="text-base sm:text-lg leading-relaxed max-w-lg text-muted-foreground">
               Healthcare &amp; MedTech Strategy · Project Management ·
               Market Intelligence · Business Analytics
             </p>
@@ -55,11 +56,10 @@ export default function HeroSection() {
                 onClick={() => scrollTo("#portfolio")}
                 className="px-7 py-3.5 font-semibold rounded-full
                   transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
-                  active:translate-y-0 active:scale-[0.98] inline-flex items-center gap-2"
+                  active:translate-y-0 active:scale-[0.98] inline-flex items-center gap-2
+                  bg-primary text-primary-foreground"
                 style={{
-                  background: 'hsl(15, 55%, 42%)',
-                  color: 'hsl(36, 30%, 96%)',
-                  boxShadow: '0 4px 20px -4px hsl(15 55% 42% / 0.4)'
+                  boxShadow: '0 4px 20px -4px hsl(var(--primary) / 0.35)'
                 }}
               >
                 View Work <ArrowRight size={16} />
@@ -69,56 +69,30 @@ export default function HeroSection() {
                 href="mailto:rajgor.v@northeastern.edu"
                 className="px-7 py-3.5 font-semibold rounded-full
                   transition-all duration-300 hover:-translate-y-0.5
-                  active:translate-y-0 active:scale-[0.98]"
-                style={{
-                  border: '1.5px solid hsl(36, 15%, 30%)',
-                  color: 'hsl(36, 15%, 70%)',
-                }}
+                  active:translate-y-0 active:scale-[0.98] border border-border
+                  text-foreground hover:bg-muted"
               >
                 Get in Touch
               </a>
             </div>
 
-            {/* Social */}
-            <div className="flex items-center gap-5 pt-2 justify-center md:justify-start text-sm"
-              style={{ color: 'hsl(36, 10%, 40%)' }}
-            >
-              <a
-                href="https://www.linkedin.com/in/vrundarajgor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 transition-colors"
-                style={{ color: 'hsl(36, 10%, 40%)' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'hsl(36, 15%, 65%)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'hsl(36, 10%, 40%)'}
-              >
-                <Linkedin size={16} /> LinkedIn
-              </a>
-              <span style={{ color: 'hsl(36, 10%, 25%)' }}>|</span>
-              <a
-                href="mailto:rajgor.v@northeastern.edu"
-                className="inline-flex items-center gap-2 transition-colors"
-                style={{ color: 'hsl(36, 10%, 40%)' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'hsl(36, 15%, 65%)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'hsl(36, 10%, 40%)'}
-              >
-                <Mail size={16} /> Email
-              </a>
+            {/* Stats Row */}
+            <div className="flex flex-wrap items-center gap-6 pt-6 justify-center md:justify-start">
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col items-center text-center">
+                  <stat.icon size={20} className="text-secondary mb-1" />
+                  <span className="text-xl font-bold text-foreground">{stat.value}</span>
+                  <span className="text-xs text-muted-foreground">{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Right: Profile image */}
           <div className="flex-shrink-0 relative group">
-            {/* Decorative ring */}
-            <div className="absolute -inset-5 rounded-full transition-all duration-700"
-              style={{ border: '1px solid hsl(36, 15%, 25%)', opacity: 0.5 }}
-            />
-            <div className="absolute -inset-5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-              style={{ boxShadow: '0 0 50px 10px hsl(15 55% 42% / 0.12)' }}
-            />
-            <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] rounded-full overflow-hidden
-              shadow-2xl relative z-10"
-              style={{ border: '3px solid hsl(36, 15%, 22%)' }}
+            {/* Rounded rect frame with shadow */}
+            <div className="w-72 h-80 sm:w-80 sm:h-[380px] lg:w-[380px] lg:h-[440px] rounded-3xl overflow-hidden
+              shadow-xl relative z-10 border-4 border-white"
             >
               <img
                 src={profileImage}
@@ -126,13 +100,25 @@ export default function HeroSection() {
                 className="w-full h-full object-cover object-top"
               />
             </div>
+
+            {/* Floating card */}
+            <div className="absolute -bottom-4 -left-4 sm:-left-8 bg-card rounded-2xl shadow-lg px-5 py-3 z-20
+              border border-border flex items-center gap-3"
+            >
+              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
+                <Heart size={18} className="text-secondary-foreground" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-foreground">Data-Driven Strategy</p>
+                <p className="text-xs text-muted-foreground">Biopharma & MedTech focus</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Explore indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.2em] flex flex-col items-center gap-2 cursor-pointer transition-colors"
-        style={{ color: 'hsl(36, 10%, 35%)' }}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.2em] flex flex-col items-center gap-2 cursor-pointer transition-colors text-muted-foreground hover:text-foreground"
         onClick={() => scrollTo("#about")}
       >
         Explore

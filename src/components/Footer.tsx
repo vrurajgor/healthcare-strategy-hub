@@ -5,7 +5,7 @@ export default function Footer() {
     document.querySelector("#home")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <footer className="py-10 border-t border-border bg-primary">
+    <footer className="py-10 border-t border-border bg-card">
       <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <p className="font-display font-normal text-sm mb-1 text-primary-foreground">

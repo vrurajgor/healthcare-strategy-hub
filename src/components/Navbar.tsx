@@ -41,10 +41,8 @@ export default function Navbar() {
           className="flex items-center gap-2 transition-colors duration-300"
         >
           <Home size={18} className={scrolled ? "text-primary" : "text-foreground"} />
-          <span className={`font-display text-lg tracking-wide uppercase ${
-            scrolled ? "text-foreground" : "text-foreground"
-          }`}>
-            Vrunda Rajgor
+          <span className="font-display text-lg tracking-wide uppercase text-foreground">
+            VR
           </span>
         </button>
 

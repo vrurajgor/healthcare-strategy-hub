@@ -41,7 +41,7 @@ export default function HeroSection() {
 
             {/* Name */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-normal leading-[1.08] tracking-tight text-foreground">
-              Vrunda<br />Rajgor
+              Vrunda Rajgor
             </h1>
 
             {/* Subtitle */}

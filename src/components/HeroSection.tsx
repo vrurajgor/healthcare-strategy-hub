@@ -6,7 +6,7 @@ export default function HeroSection() {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
   const stats = [
-    { icon: Users, value: "10+", label: "Projects Delivered" },
+    { icon: Users, value: "30+", label: "Projects Delivered" },
     { icon: Briefcase, value: "3+", label: "Years Experience" },
     { icon: Heart, value: "100%", label: "Dedication" },
     { icon: Clock, value: "24/7", label: "Committed" },

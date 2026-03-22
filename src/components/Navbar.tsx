@@ -31,12 +31,19 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-card/85 backdrop-blur-xl shadow-[0_1px_3px_rgb(0_0_0/0.06),0_8px_24px_-8px_rgb(0_0_0/0.04)]"
+          ? "bg-card/90 backdrop-blur-xl shadow-[0_1px_0_hsl(var(--border))]"
           : "bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between h-16">
-        <div className="w-8" />
+        <button
+          onClick={() => handleClick("#home")}
+          className={`font-display text-lg transition-colors duration-300 ${
+            scrolled ? "text-foreground" : "text-white/80"
+          }`}
+        >
+          VR
+        </button>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-1">
@@ -46,8 +53,8 @@ export default function Navbar() {
                 onClick={() => handleClick(l.href)}
                 className={`text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300 ${
                   scrolled
-                    ? "text-foreground/70 hover:text-foreground hover:bg-muted"
-                    : "text-white/70 hover:text-white hover:bg-white/10"
+                    ? "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    : "text-white/50 hover:text-white/80 hover:bg-white/5"
                 }`}
               >
                 {l.label}
@@ -72,13 +79,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border animate-[fade-in_0.2s_ease-out]">
+        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border">
           <ul className="section-container py-4 space-y-1">
             {links.map((l) => (
               <li key={l.href}>
                 <button
                   onClick={() => handleClick(l.href)}
-                  className="block w-full text-left text-sm font-medium text-foreground/80 hover:text-foreground
+                  className="block w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground
                     px-3 py-2.5 rounded-lg hover:bg-muted transition-colors"
                 >
                   {l.label}

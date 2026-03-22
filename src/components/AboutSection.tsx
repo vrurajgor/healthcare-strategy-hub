@@ -4,7 +4,7 @@ import { ArrowRight, FlaskConical, Building2, TrendingUp, HeartPulse } from "luc
 const journey = [
   { icon: FlaskConical, title: "Science", subtitle: "Cell & Molecular Biology" },
   { icon: Building2, title: "Consulting", subtitle: "MedTech Market Intelligence" },
-  { icon: TrendingUp, title: "Project Management", subtitle: "Business Analytics" },
+  { icon: TrendingUp, title: "Project Management", subtitle: "Business Analysis" },
   { icon: HeartPulse, title: "Healthcare Strategy", subtitle: "Biopharma & Digital Health" },
 ];
 
@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="reveal stagger-1">
               <p className="text-muted-foreground leading-[1.9] text-base">
                 A dual master's candidate in{" "}
-                <span className="text-foreground font-semibold">Project Management (Concentration: Business Analytics)</span> and{" "}
+                <span className="text-foreground font-semibold">Project Management (Concentration: Business Analysis)</span> and{" "}
                 <span className="text-foreground font-semibold">Cell &amp; Molecular Biology</span>, with
                 experience spanning healthcare consulting, MedTech strategy, and
                 pharmaceutical R&amp;D.

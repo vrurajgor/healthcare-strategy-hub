@@ -39,11 +39,6 @@ export default function HeroSection() {
               Market Intelligence · Business Analytics
             </p>
 
-            {/* Quote */}
-            <p className="text-white/40 italic font-display text-base">
-              "Driving data-driven innovation across Biopharma, MedTech,<br className="hidden sm:block" />
-              and Digital Health"
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-4 justify-center md:justify-start">
